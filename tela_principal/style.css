@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Fundo */
+body {
+  background: #f2f2f2;
+}
+
+/* Topo */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: #84d0e8;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  margin: 10px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+ 
+}
+
+nav p {
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.logo {
+  width: 120px;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  width: 100%;
+}
+
+/* Cards em grid RESPONSIVO */
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  width: 95%;
+  max-width: 900px;
+  padding: 10px;
+}
+
+/* Card */
+.card {
+  display: flex;
+  flex-direction: column;
+  position: static;
+  border-radius: 20px;
+  background-color: #f3f3f3;
+  box-shadow: 0 0 15px #000000b0;
+}
+
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 20px;
+  
+}
+
+.card .info {
+  padding: 15px;
+  background: #cc7324; /* marrom escuro da paleta */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 20px;
+}
+
+/* Botões abaixo de cada card */
+.card-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 12px 0 15px;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  background: #b3b3b3;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    background: #888888;
+    transition: 0.2s ease;
+}
+
+.dislike { color: #db7b25; }
+.like { color: #ffffff; }
+.superlike { color: #2d1901; }
+.rewind { color: #503700; }
+
+/* SUPERLIKE ANIMAÇÃO */
+.super-effect {
+  animation: pulse 0.4s ease forwards;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* ---------------- RESPONSIVIDADE ---------------- */
+
+/* CELULARES */
+@media (max-width: 480px) {
+  .top-bar {
+    padding: 10px 15px;
+  }
+
+  nav p {
+    font-size: 14px;
+  }
+
+  .logo {
+    width: 95px;
+  }
+
+  .cards-wrapper {
+    grid-template-columns: 1fr; /* só 1 card na tela */
+  }
+
+  .card img {
+    height: 220px;
+  }
+}
+
+/* TABLETS */
+@media (min-width: 481px) and (max-width: 900px) {
+  .cards-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 901px) {
+  .cards-wrapper {
+    grid-template-columns: repeat(2, 1fr); /* sempre 2 cards */
+  }
+}
