@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Fundo LOVE */
+.bg-love {
+  position: fixed;
+  inset: 0;
+  background-image: url("/tela-login/img/background\ -\ Pet4love.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+  z-index: -1;
+}
+
+/* Logo */
+.logo-area {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.logo {
+  width: 300px;
+  height: 100px;
+  background-image: url("/tela-login/img/Captura\ de\ tela\ 2025-11-25\ 194752.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: auto;
+}
+
+.logo-area p {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* Card */
+.card {
+  width: 85%;
+  max-width: 330px;
+  background: rgba(255, 255, 255, 0.479);
+  backdrop-filter: blur(6px);
+  padding: 25px;
+  border-radius: 20px;
+  margin: 20px auto;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  border: solid 2px #d4d4d4;
+}
+
+.card h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Inputs */
+.input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  background: #f7caa3;
+  outline: none;
+  border: solid 1px #725838;
+}
+
+/* Botão */
+.btn {
+  width: 50%;
+  padding: 12px;
+  height: 40px;
+  border: none;
+  border-radius: 60px;
+  font-size: 16px;
+  background: #f4a563;
+  cursor: pointer;
+  transition: 0.2s;
+  border: solid 1px #725838;
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.pets img{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200pxpx;
+   /* ajuste aqui dependendo da imagem */
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  pointer-events: none;
+}
